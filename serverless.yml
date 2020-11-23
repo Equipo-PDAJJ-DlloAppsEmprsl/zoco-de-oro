@@ -1,0 +1,23 @@
+service:
+  name: market-service
+
+plugins:
+  - serverless-bundle
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 256
+  region: ${opt:region, 'us-east-2'}
+functions:
+  getProductList:
+    handler: src/handlers/getProductList.handler
+    events:
+      - http:
+          method: GET
+          path: /products
+
+custom:
+  bundle:
+    linting: false

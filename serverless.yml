@@ -1,5 +1,5 @@
 service:
-  name: market-srv
+  name: market-service
 
 plugins:
   - serverless-bundle
@@ -23,7 +23,6 @@ functions:
       - http:
           method: GET
           path: /products
-    
 custom:
   bundle:
     linting: false

@@ -1,7 +1,7 @@
 service:
   name: product-service
 
-app: 'zoco-de-orp-rest-api'
+app: 'zoco-de-oro-rest-api'
 
 plugins:
   - serverless-bundle

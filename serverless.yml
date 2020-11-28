@@ -19,12 +19,19 @@ provider:
 
 functions:
   getProductList:
-    handler: src/handlers/getProductList.handle
+    handler: src/handlers/getProductList.handler
     name: getProductList-lambda-${opt:stage} # optional, Deployed Lambda name
     events:
       - http:
           method: GET
           path: /products
+  getProductDetail:
+    handler: src/handlers/getProductDetail.handler
+    name: getProductDetail-lambda-${opt:stage} # optional, Deployed Lambda name
+    events:
+      - http:
+          method: GET
+          path: /products/{ID}
 custom:
   bundle:
     linting: false

@@ -1,27 +1,54 @@
-const sequelize = require("../config/db.config");
+const { Op } = require("sequelize");
 require("dotenv").config();
 const Product = require("../models/product.model");
-const User = require("../models/user.model");
 
-async function getProductListService(path) {
+async function getProductListService(param) {
+  
   Product.sync();
 
-  const products = await Product.findAll();
-  console.log(products.every(product => product instanceof Product)); // true
-  console.log("All products:", JSON.stringify(products, null, 2));
-  console.log('productos sin stringify', products)
-  // const producto = await Product.create({
-  //   nombre: "gallito",
-  //   marca: "oster",
-  //   ciudad: {"nombre": "medellin"},
-  //   precio: 2500,
-  //   seller: {"nombre": "empresa vendedora"},
-  //   rating: 4.5,
-  //   descripcion: "producto de prueba",
-  //   thumbnail: "www.facebook.com",
-  //   fotos: {"id": "fot de prueba"},
-  // });
-  // console.log("Jane's auto-generated ID:", producto.id);
+  if(param === '') {
+    return ['prueba']
+  }
+
+  const products = await Product.findAll({
+    attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+    where: {
+      [Op.or]: [
+        {
+          nombre: {
+            [Op.startsWith]: param
+          }
+        },
+        {
+          marca: {
+            [Op.startsWith]: param
+          }
+        }
+      ]
+    }
+  });
+
+  if (products.length === 0) {
+    products = await Product.findAll({
+      attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+      where: {
+        [Op.or]: [
+          {
+            nombre: {
+              [Op.substring]: param
+            }
+          },
+          {
+            marca: {
+              [Op.substring]: param
+            }
+          }
+        ]
+      }
+    });
+  }
+  console.log(products)
+  return products;
 }
 
 module.exports = getProductListService;

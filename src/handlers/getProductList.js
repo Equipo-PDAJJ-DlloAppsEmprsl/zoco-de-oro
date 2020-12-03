@@ -11,7 +11,7 @@ async function getProductList(event, context) {
   return {
     statusCode: 200,
     body: {
-      query: event.queryStringParameters.search, //modificar
+      query: event.queryStringParameters, //modificar
       total: respuesta.length,
       seller: respuesta[0].dataValues.seller,
       items: products

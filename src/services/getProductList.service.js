@@ -47,7 +47,7 @@ async function getProductListService(param) {
       }
     });
   }
-  console.log(products)
+  console.log(products.length)
   return products;
 }
 

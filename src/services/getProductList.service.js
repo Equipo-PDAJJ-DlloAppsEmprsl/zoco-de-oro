@@ -7,7 +7,7 @@ async function getProductListService(param) {
   Product.sync();
 
   if(param === '') {
-    return ['prueba']
+    return []
   }
 
   const products = await Product.findAll({
@@ -47,7 +47,7 @@ async function getProductListService(param) {
       }
     });
   }
-  console.log(products)
+  console.log(products[0])
   return products;
 }
 

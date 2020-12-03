@@ -20,7 +20,7 @@ provider:
 functions:
   getProductList:
     handler: src/handlers/getProductList.handler
-    name: getProductList-lambda-${opt:stage} # optional, Deployed Lambda name
+    name: getProductList${opt:stage} # optional, Deployed Lambda name
     events:
       - http:
           method: GET

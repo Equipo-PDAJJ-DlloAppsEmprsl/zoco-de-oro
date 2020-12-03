@@ -7,15 +7,17 @@ async function getProductList(event, context) {
 
   let respuesta = await getProductListService('samsung')
   let products = createItems(respuesta);
+ 
   return {
     statusCode: 200,
     body: {
-      query: event.params, //modificar
+      query: event.queryStringParameters.search, //modificar
       total: respuesta.length,
       seller: respuesta[0].dataValues.seller,
       items: products
     }
   };
+
 }
 
 const createItems = (items) => {

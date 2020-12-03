@@ -10,7 +10,7 @@ async function getProductList(event, context) {
   return {
     statusCode: 200,
     body: {
-      query: event.pathParam, //modificar
+      query: event.params, //modificar
       total: respuesta.length,
       seller: respuesta[0].dataValues.seller,
       items: products
@@ -35,6 +35,6 @@ const createItems = (items) => {
   });
 }
 
-export const handler = getProductList;
+module.exports  = getProductList;
 
 

@@ -10,12 +10,16 @@ async function getProductList(event, context) {
  
   return {
     statusCode: 200,
-    body: {
-      query: event.queryStringParameters, //modificar
-      total: respuesta.length,
-      seller: respuesta[0].dataValues.seller,
-      items: products
-    }
+    body: JSON.stringify({
+      message: 'Go Serverless v1.0! Your function executed successfully!',
+      input: event
+    })
+    // body: {
+    //   query: event.queryStringParameters, //modificar
+    //   total: respuesta.length,
+    //   seller: respuesta[0].dataValues.seller,
+    //   items: products
+    // }
   };
 
 }

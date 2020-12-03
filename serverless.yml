@@ -6,7 +6,7 @@ app: 'zoco-de-oro-rest-api'
 plugins:
   - serverless-bundle
   - serverless-pseudo-parameters
-
+  - serverless-dotenv-plugin
 provider:
   stage: ${opt:stage}
   name: aws

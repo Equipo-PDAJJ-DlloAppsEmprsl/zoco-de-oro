@@ -41,6 +41,8 @@ const createItems = (items) => {
   //TODO: mover a un business logic
 
 
-module.exports  = getProductList;
+module.exports  = {
+  handler: getProductList
+  };
 
 

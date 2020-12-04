@@ -1,6 +1,6 @@
 const { Op } = require("sequelize");
 require("dotenv").config();
-const Product = require("../models/product.model");
+import Product from "../models/product.model";
 
 async function getProductDetailService(_id) {
   Product.sync();
@@ -31,4 +31,4 @@ async function getProductDetailService(_id) {
   }
 }
 
-module.exports = getProductDetailService;
+export default getProductDetailService;

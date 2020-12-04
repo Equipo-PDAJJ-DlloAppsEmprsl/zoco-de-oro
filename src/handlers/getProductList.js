@@ -1,24 +1,25 @@
 
-const getProductListService = require('../services/getProductList.service');
+import {getProductListService} from '../services/getProductList.service';
 
 async function getProductList(event, context) {
 
   // SE NECESITA CAPTURAR UN QUERY PARAMETER DEL event
   // let query = ?????????
+  let response;
+  try {
+    response = await getProductListService('samsung')
+    console.log("respuesta: ", response);
+  }catch(ex){
+    console.log("error", ex);
+    response = ex;
+  }
 
-  let response = await getProductListService('samsung')
-  //let products = createItems(respuesta);
+  
+  const stringRpta = response.toString();
   return {
     statusCode: 200,
-    // body: JSON.stringify({
-    //   message: 'Go Serverless v1.0! Your function executed successfully!',
-    //   input: event
-    // })
-    body: {
-      query: event.queryStringParameters, //modificar
-      total: response.length,
-      response: response
-    }
+    response: JSON.stringify({stringRpta}),
+    body: JSON.stringify({ event, context }),
   };
 
 }
@@ -41,8 +42,8 @@ const createItems = (items) => {
   //TODO: mover a un business logic
 
 
-module.exports  = {
-  handler: getProductList
-  };
+
+  export const handler = getProductList;
+
 
 

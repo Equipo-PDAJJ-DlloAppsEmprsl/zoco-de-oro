@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = require('../config/db.config');
+import sequelize from '../config/db.config';
 
 const Product = sequelize.define('productos', {
       nombre: { type: DataTypes.STRING, allowNull: false },
@@ -15,4 +15,4 @@ const Product = sequelize.define('productos', {
   tableName: 'productos'
 });
 
-module.exports = Product
+export default Product;

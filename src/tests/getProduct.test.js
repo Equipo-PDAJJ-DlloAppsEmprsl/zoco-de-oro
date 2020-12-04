@@ -1,5 +1,6 @@
 let getProductListService = require('../services/getProductList.service');
 let getProductDetailService = require('../services/getProductDetail.service')
+let getProductList = require('../handlers/getProductList');
 var should    = require("chai").should();
 
 describe("Calcultator tests using SHOULD interface from CHAI module: ",async function() {

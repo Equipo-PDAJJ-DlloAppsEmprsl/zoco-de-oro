@@ -24,7 +24,7 @@ async function getProductList(event, context) {
   };
 
 }
-
+/*
 const createItems = (items) => {
   let products = []
   items.forEach(element => {
@@ -42,7 +42,7 @@ const createItems = (items) => {
   });
 }
 //TODO: mover a un business logic
-
+*/
 module.exports  = getProductList;
 
 

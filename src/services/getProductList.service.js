@@ -4,13 +4,13 @@ import Product from "../models/product.model";
 
 export async function getProductListService(param) {
   
-  Product.sync();
+  // Product.sync();
 
   if(param === '') {
     return []
   }
 
-  const products = await Product.findAll({
+  let products = await Product.findAll({
     attributes: ['nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
     where: {
       [Op.or]: [
@@ -47,7 +47,8 @@ export async function getProductListService(param) {
       }
     });
   }
-  console.log(products.length)
+  console.log('Longitud de los productos', products.length)
+  console.log('Productos: ', products)
   return products;
 }
 

@@ -6,7 +6,7 @@ async function getProductDetailService(_id) {
   Product.sync();
 
   if (_id) {
-    const product = await Product.findAll({
+    let product = await Product.findAll({
       attributes: [
         "id",
         "nombre",

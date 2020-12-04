@@ -23,8 +23,8 @@ async function getProductDetailService(_id) {
       },
     });
 
-    console.log(product);
-    return product;
+    console.log("getProductDetailService!", product.length);
+    return product[0];
   } else {
     console.log("string vacio");
     return [];

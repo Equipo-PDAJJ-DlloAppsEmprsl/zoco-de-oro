@@ -35,3 +35,7 @@ functions:
 custom:
   bundle:
     linting: false
+  webpackIncludeModules:
+    forceInclude:
+      - mysql
+      - mysql2

@@ -11,7 +11,7 @@ async function getProductListService(param) {
   }
 
   const products = await Product.findAll({
-    attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+    attributes: ['nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
     where: {
       [Op.or]: [
         {

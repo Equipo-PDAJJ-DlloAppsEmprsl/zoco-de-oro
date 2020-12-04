@@ -1,3 +1,5 @@
+
+async function getProductlist(event, context) {
 const getProductListService = require('../services/getProductList.service');
 
 async function getProductList(event, context) {
@@ -7,7 +9,6 @@ async function getProductList(event, context) {
 
   let respuesta = await getProductListService('samsung')
   let products = createItems(respuesta);
- 
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -40,6 +41,7 @@ const createItems = (items) => {
     products.push(product)
   });
 }
+//TODO: mover a un business logic
 
 module.exports  = getProductList;
 

@@ -24,7 +24,7 @@ async function getProductList(event, context) {
     respuesta.statusCode = 200;
     respuesta.body = JSON.stringify({
       query: query,
-      total: 0,
+      total: response.length,
       seller: {
         id: response[0].dataValues.seller.id,
         name: response[0].dataValues.seller.nombre

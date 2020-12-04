@@ -24,14 +24,14 @@ functions:
     events:
       - http:
           method: GET
-          path: /products
+          path: /api/search
   getProductDetail:
     handler: src/handlers/getProductDetail.handler
     name: getProductDetail-lambda-${opt:stage} # optional, Deployed Lambda name
     events:
       - http:
           method: GET
-          path: /products/{ID}
+          path: /api/item/{ID}
 custom:
   bundle:
     linting: false

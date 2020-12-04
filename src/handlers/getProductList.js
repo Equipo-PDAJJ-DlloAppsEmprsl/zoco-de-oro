@@ -1,4 +1,25 @@
-/*
+const getProductListService = require('../services/getProductList.service');
+
+async function getProductList(event, context) {
+
+  // SE NECESITA CAPTURAR UN QUERY PARAMETER DEL event
+  // let query = ?????????
+
+  let respuesta = await getProductListService('samsung')
+  let products = createItems(respuesta);
+ 
+  return {
+    statusCode: 200,
+    body: {
+      query: event.queryStringParameters, //modificar
+      total: respuesta.length,
+      seller: respuesta[0].dataValues.seller,
+      items: products
+    }
+  };
+
+}
+
 const createItems = (items) => {
   let products = []
   items.forEach(element => {
@@ -13,23 +34,9 @@ const createItems = (items) => {
       rating: element.dataValues.rating
     }
     products.push(product)
-  });*/
-  //TODO: mover a un business logic
-
-
-const getProductListService = require('../services/getProductList.service');
-    
-async function getProductlist(event, context) {
-
-  const  response = await getProductListService('samsung');
-  return {
-    statusCode: 200,
-    body: JSON.stringify({       
-      query: event.queryStringParameters, //modificar
-      total: response.length,
-      response: response 
-    }),
-  };
+  });
 }
-export const handler = getProductlist;
+
+module.exports  = getProductList;
+
 

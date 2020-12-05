@@ -29,7 +29,7 @@ async function getProductDetail(event, context) {
         seller: {
           id: response[0].seller.id,
           name: response[0].seller.nombre,
-          // logo: response[0].seller.logo
+          logo: 'https://secureservercdn.net/198.71.233.11/d00.9b4.myftpupload.com/wp-content/uploads/2018/05/zoco-de-oro.jpg?time=1599903781'
         },
         description: response[0].descripcion,
         price: response[0].precio,

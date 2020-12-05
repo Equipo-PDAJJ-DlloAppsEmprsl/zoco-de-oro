@@ -68,7 +68,10 @@ const createItems = (items) => {
       name: element.dataValues.nombre,
       brand: element.dataValues.marca,
       thumbnail: element.dataValues.thumbnail,
-      city: element.dataValues.ciudad,
+      city: {
+        id: element.dataValues.ciudad.id,
+        name: element.dataValues.ciudad.nombre
+      },
       price: element.dataValues.precio,
       currency: "COP",
       rating: element.dataValues.rating

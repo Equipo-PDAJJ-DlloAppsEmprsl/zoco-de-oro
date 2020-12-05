@@ -11,7 +11,7 @@ export async function getProductListService(param) {
   }
 
   let products = await Product.findAll({
-    attributes: ['nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+    attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
     where: {
       [Op.or]: [
         {

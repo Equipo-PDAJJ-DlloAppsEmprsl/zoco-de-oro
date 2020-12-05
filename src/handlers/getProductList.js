@@ -18,20 +18,42 @@ async function getProductList(event, context) {
   const query = event.queryStringParameters.q;
 
   try {
+
     let response = await getProductListService(query);
-    let products = createItems(response);
+
+    console.log("response",response);
+    if(response.length!=0){
+
+      let products = createItems(response);
+      console.log("entre a diferente de 0")
+      respuesta.statusCode = 200;
+      respuesta.body = JSON.stringify({
+        query: query,
+        total: response.length,
+        seller: {
+          id: response[0].dataValues.seller.id,
+          name: response[0].dataValues.seller.nombre
+        },
+        items: products
+      })
+      
+    }else{
+      console.log("entre a igual a 0");
+      respuesta.statusCode = 200;
+      respuesta.body = JSON.stringify({
+        query: query,
+        total: response.length,
+        seller: {
+          id: "0",
+          name: "Zoco de oro"
+        },
+        items: []
+      })
     
-    respuesta.statusCode = 200;
-    respuesta.body = JSON.stringify({
-      query: query,
-      total: response.length,
-      seller: {
-        id: response[0].dataValues.seller.id,
-        name: response[0].dataValues.seller.nombre
-      },
-      items: products
-    })
+    }
+    
     return respuesta
+
   } catch (error) {
     console.log("El error es el siguiente: ", error);
     throw new createError.InternalServerError(error);

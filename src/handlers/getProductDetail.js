@@ -13,27 +13,36 @@ async function getProductDetail(event, context) {
 
   try {
     let response = await getProductDetailService(parameter);
-    respuesta.statusCode = 200;
-    respuesta.body = JSON.stringify({
-      id: response[0].id,
-      name: response[0].nombre,
-      brand: response[0].marca,
-      thumbnail: response[0].thumbnail,
-      pictures: response[0].fotos,
-      city: {
-        id: response[0].ciudad.id,
-        name: response[0].ciudad.nombre,
-      },
-      seller: {
-        id: response[0].seller.id,
-        name: response[0].seller.nombre,
-        // logo: response[0].seller.logo
-      },
-      description: response[0].descripcion,
-      price: response[0].precio,
-      currency: "COP",
-      rating: response[0].rating,
-    });
+
+    if(response.length!=0){
+      respuesta.statusCode = 200;
+      respuesta.body = JSON.stringify({
+        id: response[0].id,
+        name: response[0].nombre,
+        brand: response[0].marca,
+        thumbnail: response[0].thumbnail,
+        pictures: response[0].fotos,
+        city: {
+          id: response[0].ciudad.id,
+          name: response[0].ciudad.nombre,
+        },
+        seller: {
+          id: response[0].seller.id,
+          name: response[0].seller.nombre,
+          // logo: response[0].seller.logo
+        },
+        description: response[0].descripcion,
+        price: response[0].precio,
+        currency: "COP",
+        rating: response[0].rating,
+      });
+      
+    }else{
+      respuesta.statusCode = 400;
+      respuesta.body = JSON.stringify("No existe el producto");
+
+    }
+
     return respuesta;
   } catch (error) {
     throw new createError.InternalServerError(error);

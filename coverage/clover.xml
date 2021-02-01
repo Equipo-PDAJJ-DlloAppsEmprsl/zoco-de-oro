@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1612142010189" clover="3.2.0">
-  <project timestamp="1612142010189" name="All files">
-    <metrics statements="171" coveredstatements="13" conditionals="333" coveredconditionals="1" methods="60" coveredmethods="2" elements="564" coveredelements="16" complexity="0" loc="171" ncloc="171" packages="5" files="9" classes="9"/>
+<coverage generated="1612143899230" clover="3.2.0">
+  <project timestamp="1612143899230" name="All files">
+    <metrics statements="158" coveredstatements="13" conditionals="335" coveredconditionals="1" methods="58" coveredmethods="2" elements="551" coveredelements="16" complexity="0" loc="158" ncloc="158" packages="5" files="9" classes="9"/>
     <package name="coverage.lcov-report">
       <metrics statements="106" coveredstatements="0" conditionals="323" coveredconditionals="0" methods="52" coveredmethods="0"/>
       <file name="block-navigation.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/coverage/lcov-report/block-navigation.js">
@@ -124,17 +124,17 @@
       <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="db.config.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/config/db.config.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.handlers">
-      <metrics statements="37" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="24" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="getProductDetail.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/handlers/getProductDetail.js">
         <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
@@ -152,31 +152,18 @@
         <line num="52" count="0" type="stmt"/>
       </file>
       <file name="getProductList.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/handlers/getProductList.js">
-        <metrics statements="24" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="10" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="0" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.models">

@@ -1,7 +1,7 @@
 import { getProductDetailService } from "../services/getProductDetail.service";
 import createError from "http-errors";
 
-async function getProductDetail(event, context) {
+export async function getProductDetail(event, context) {
   context.callbackWaitsForEmptyEventLoop = false;
   const respuesta = {
     headers: {
@@ -48,5 +48,3 @@ async function getProductDetail(event, context) {
     throw new createError.InternalServerError(error);
   }
 }
-
-export const handler = getProductDetail;

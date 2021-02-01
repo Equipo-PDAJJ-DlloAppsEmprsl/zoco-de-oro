@@ -1,42 +1,55 @@
-const getProductListService = require('../services/getProductList.service');
+const { Op } = require("sequelize");
+require("dotenv").config();
+import Product from "../models/product.model";
 
-async function getProductList(event, context) {
+export default async function getProductListService(param) {
+  
+  console.log("bbs los amo!!")
+  // Product.sync();
 
-  // SE NECESITA CAPTURAR UN QUERY PARAMETER DEL event
-  // let query = ?????????
+  if(param === '') {
+    return []
+  }
 
-  let respuesta = await getProductListService('samsung')
-  let products = createItems(respuesta);
- 
-  return {
-    statusCode: 200,
-    body: {
-      query: event.queryStringParameters, //modificar
-      total: respuesta.length,
-      seller: respuesta[0].dataValues.seller,
-      items: products
+  let products = await Product.findAll({
+    attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+    where: {
+      [Op.or]: [
+        {
+          nombre: {
+            [Op.startsWith]: param
+          }
+        },
+        {
+          marca: {
+            [Op.startsWith]: param
+          }
+        }
+      ]
     }
-  };
-
-}
-
-const createItems = (items) => {
-  let products = []
-  items.forEach(element => {
-    let product = {
-      id: element.dataValues.id,
-      name: element.dataValues.nombre,
-      brand: element.dataValues.marca,
-      thumbnail: element.dataValues.thumbnail,
-      city: element.dataValues.ciudad,
-      price: element.dataValues.precio,
-      currency: "COP",
-      rating: element.dataValues.rating
-    }
-    products.push(product)
   });
+
+  if (products.length === 0) {
+    products = await Product.findAll({
+      attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+      where: {
+        [Op.or]: [
+          {
+            nombre: {
+              [Op.substring]: param
+            }
+          },
+          {
+            marca: {
+              [Op.substring]: param
+            }
+          }
+        ]
+      }
+    });
+  }
+  console.log('Longitud de los productos', products.length)
+  console.log('Productos: ', products)
+  return products;
 }
-
-module.exports  = getProductList;
-
 

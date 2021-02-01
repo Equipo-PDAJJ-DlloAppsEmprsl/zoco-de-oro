@@ -1,17 +1,18 @@
 const { Op } = require("sequelize");
 require("dotenv").config();
-const Product = require("../models/product.model");
+import Product from "../models/product.model";
 
-async function getProductListService(param) {
+export default async function getProductListService(param) {
   
-  Product.sync();
+  console.log("bbs los amo!!")
+  // Product.sync();
 
   if(param === '') {
     return []
   }
 
-  const products = await Product.findAll({
-    attributes: ['nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
+  let products = await Product.findAll({
+    attributes: ['id', 'nombre', 'marca', 'thumbnail', 'ciudad', 'precio', 'seller', 'rating'],
     where: {
       [Op.or]: [
         {
@@ -47,8 +48,8 @@ async function getProductListService(param) {
       }
     });
   }
-  console.log(products.length)
+  console.log('Longitud de los productos', products.length)
+  console.log('Productos: ', products)
   return products;
 }
 
-module.exports = getProductListService;

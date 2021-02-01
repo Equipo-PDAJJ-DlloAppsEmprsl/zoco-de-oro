@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 import sequelize from '../config/db.config';
 
-const Product = sequelize.define('productos', {
+const Product = sequelize.define('producto', {
       nombre: { type: DataTypes.STRING, allowNull: false },
       marca: { type: DataTypes.STRING, allowNull: false },
       ciudad: { type: DataTypes.JSON, allowNull: false },
@@ -12,7 +12,7 @@ const Product = sequelize.define('productos', {
       thumbnail: { type: DataTypes.STRING, allowNull: false },
       fotos: { type: DataTypes.JSON, allowNull: false },
 }, {
-  tableName: 'productos'
+  tableName: 'producto'
 });
 
 export default Product;

@@ -2,8 +2,9 @@ const { Op } = require("sequelize");
 require("dotenv").config();
 import Product from "../models/product.model";
 
-export async function getProductListService(param) {
+export default async function getProductListService(param) {
   
+  console.log("bbs los amo!!")
   // Product.sync();
 
   if(param === '') {

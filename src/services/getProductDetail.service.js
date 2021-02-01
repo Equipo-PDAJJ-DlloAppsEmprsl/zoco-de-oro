@@ -1,16 +1,18 @@
+
 const { Op } = require("sequelize");
 require("dotenv").config();
-const Product = require("../models/product.model");
+import Product from "../models/product.model";
 
-async function getProductDetailService(_id) {
-  Product.sync();
+export async function getProductDetailService(_id) {
+  // Product.sync();
 
   if (_id) {
-    const product = await Product.findAll({
+    let product = await Product.findAll({
       attributes: [
         "id",
         "nombre",
         "marca",
+        "thumbnail",
         "fotos",
         "ciudad",
         "precio",
@@ -24,11 +26,9 @@ async function getProductDetailService(_id) {
     });
 
     console.log("getProductDetailService!", product.length);
-    return product[0];
+    return product;
   } else {
     console.log("string vacio");
     return [];
   }
 }
-
-module.exports = getProductDetailService;

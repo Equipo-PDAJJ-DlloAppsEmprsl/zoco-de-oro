@@ -3,6 +3,8 @@ require("dotenv").config();
 import Product from "../models/product.model";
 
 export async function getProductListService(param) {
+  
+  // Product.sync();
 
   if(param === '') {
     return []
@@ -49,4 +51,3 @@ export async function getProductListService(param) {
   console.log('Productos: ', products)
   return products;
 }
-

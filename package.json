@@ -4,7 +4,7 @@
   "description": "Codingly template for Serverless Framework projects",
   "author": "Ariel Weinberger <ariel@codingly.io>",
   "scripts": {
-    "test": "serverless-bundle test --coverage",
+    "test": "serverless-bundle test --coverage --detectOpenHandles",
     "start": "node index.js"
   },
   "license": "MIT",

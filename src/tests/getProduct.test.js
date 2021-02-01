@@ -1,5 +1,5 @@
 import getProductListService from '../services/getProductList.service';
-      test("get product list by number or brand",async function() {
+      test("get product list by number or brand", async function() {
          const response = await getProductListService('samsung');
-         console.log(response);
+         expect(response.length).toBeGreaterThan(0);
 });

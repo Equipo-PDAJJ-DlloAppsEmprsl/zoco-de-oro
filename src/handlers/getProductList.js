@@ -4,9 +4,6 @@ import Product from "../models/product.model";
 
 export default async function getProductListService(param) {
   
-  console.log("bbs los amo!!")
-  // Product.sync();
-
   if(param === '') {
     return []
   }

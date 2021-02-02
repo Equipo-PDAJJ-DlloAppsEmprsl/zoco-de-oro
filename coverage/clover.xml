@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1612150351950" clover="3.2.0">
-  <project timestamp="1612150351950" name="All files">
-    <metrics statements="170" coveredstatements="16" conditionals="333" coveredconditionals="2" methods="60" coveredmethods="2" elements="563" coveredelements="20" complexity="0" loc="170" ncloc="170" packages="5" files="9" classes="9"/>
+<coverage generated="1612229396655" clover="3.2.0">
+  <project timestamp="1612229396655" name="All files">
+    <metrics statements="170" coveredstatements="23" conditionals="333" coveredconditionals="3" methods="60" coveredmethods="3" elements="563" coveredelements="29" complexity="0" loc="170" ncloc="170" packages="5" files="9" classes="9"/>
     <package name="coverage.lcov-report">
       <metrics statements="106" coveredstatements="0" conditionals="323" coveredconditionals="0" methods="52" coveredmethods="0"/>
-      <file name="block-navigation.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/coverage/lcov-report/block-navigation.js">
+      <file name="block-navigation.js" path="/Users/paulagomez/Documents/zoco-de-oro/coverage/lcov-report/block-navigation.js">
         <metrics statements="28" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
@@ -35,11 +35,11 @@
         <line num="75" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
       </file>
-      <file name="prettify.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/coverage/lcov-report/prettify.js">
+      <file name="prettify.js" path="/Users/paulagomez/Documents/zoco-de-oro/coverage/lcov-report/prettify.js">
         <metrics statements="1" coveredstatements="0" conditionals="286" coveredconditionals="0" methods="29" coveredmethods="0"/>
         <line num="2" count="0" type="cond" truecount="0" falsecount="286"/>
       </file>
-      <file name="sorter.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/coverage/lcov-report/sorter.js">
+      <file name="sorter.js" path="/Users/paulagomez/Documents/zoco-de-oro/coverage/lcov-report/sorter.js">
         <metrics statements="77" coveredstatements="0" conditionals="22" coveredconditionals="0" methods="17" coveredmethods="0"/>
         <line num="2" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
@@ -122,7 +122,7 @@
     </package>
     <package name="src.config">
       <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="db.config.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/config/db.config.js">
+      <file name="db.config.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/config/db.config.js">
         <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -134,9 +134,9 @@
       </file>
     </package>
     <package name="src.handlers">
-      <metrics statements="37" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="getProductDetail.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/handlers/getProductDetail.js">
-        <metrics statements="13" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="37" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="getProductDetail.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/handlers/getProductDetail.js">
+        <metrics statements="13" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="5" count="0" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
@@ -149,9 +149,9 @@
         <line num="42" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
-      <file name="getProductList.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/handlers/getProductList.js">
+      <file name="getProductList.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/handlers/getProductList.js">
         <metrics statements="24" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -181,37 +181,37 @@
     </package>
     <package name="src.models">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="product.model.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/models/product.model.js">
+      <file name="product.model.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/models/product.model.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
-      <metrics statements="18" coveredstatements="8" conditionals="6" coveredconditionals="2" methods="2" coveredmethods="1"/>
-      <file name="getProductDetail.service.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/services/getProductDetail.service.js">
-        <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+      <metrics statements="18" coveredstatements="14" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="getProductDetail.service.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/services/getProductDetail.service.js">
+        <metrics statements="8" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
       </file>
-      <file name="getProductList.service.js" path="/media/juan/Linux-data/Jobs/UdeA/Empresariales/Final/Zocodeoro/zoco-de-oro/src/services/getProductList.service.js">
+      <file name="getProductList.service.js" path="/Users/paulagomez/Documents/zoco-de-oro/src/services/getProductList.service.js">
         <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="31" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
       </file>
     </package>
   </project>

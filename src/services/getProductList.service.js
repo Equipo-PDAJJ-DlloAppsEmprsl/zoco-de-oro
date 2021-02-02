@@ -2,9 +2,8 @@ const { Op } = require("sequelize");
 require("dotenv").config();
 import Product from "../models/product.model";
 
-export default async function getProductListService(param) {
+export async function getProductListService(param) {
   
-  console.log("bbs los amo!!")
   // Product.sync();
 
   if(param === '') {
@@ -48,8 +47,5 @@ export default async function getProductListService(param) {
       }
     });
   }
-  console.log('Longitud de los productos', products.length)
-  console.log('Productos: ', products)
   return products;
 }
-

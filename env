@@ -1,5 +1,0 @@
-PROFILE=dev
-DB_HOST=zoco-de-oro.cj6wna3vbr7y.us-east-1.rds.amazonaws.com
-DB_USER=admin
-DB_PASSWORD=empresariales20201
-DB_DATABASE=zocodeoro

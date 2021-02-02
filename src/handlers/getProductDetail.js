@@ -14,7 +14,7 @@ async function getProductDetail(event, context) {
   try {
     let response = await getProductDetailService(parameter);
 
-    if(response.length!=0){
+    if (response.length != 0) {
       respuesta.statusCode = 200;
       respuesta.body = JSON.stringify({
         id: response[0].id,
@@ -36,11 +36,10 @@ async function getProductDetail(event, context) {
         currency: "COP",
         rating: response[0].rating,
       });
-      
-    }else{
+
+    } else {
       respuesta.statusCode = 400;
       respuesta.body = JSON.stringify("No existe el producto");
-
     }
 
     return respuesta;

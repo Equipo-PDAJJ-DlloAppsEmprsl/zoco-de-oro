@@ -3,14 +3,14 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/models/product.model.js</title>
+    <title>Code coverage report for src/tests/__mocks___/ProductDetail.mock.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -18,13 +18,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/models</a> product.model.js</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/tests/__mocks___</a> ProductDetail.mock.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -45,7 +45,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
@@ -73,10 +73,7 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -90,24 +87,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { Sequelize, DataTypes } = require('sequelize');
-import sequelize from '../config/db.config';
-&nbsp;
-const Product = sequelize.define('producto', {
-      nombre: { type: DataTypes.STRING, allowNull: false },
-      marca: { type: DataTypes.STRING, allowNull: false },
-      ciudad: { type: DataTypes.JSON, allowNull: false },
-      precio: { type: DataTypes.FLOAT, allowNull: false },
-      seller: { type: DataTypes.JSON, allowNull: false },
-      rating: { type: DataTypes.FLOAT },
-      descripcion: { type: DataTypes.STRING, allowNull: false },
-      thumbnail: { type: DataTypes.STRING, allowNull: false },
-      fotos: { type: DataTypes.JSON, allowNull: false },
-}, {
-  tableName: 'producto'
-});
-&nbsp;
-export default Product;</pre></td></tr></table></pre>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const productDetail = [{
+      id: 1,
+      nombre: 'Televisor 60 pulgadas',
+      marca: 'LG',
+      thumbnail: 'https://s3.amazonaws.com/storage.wobiz.com/135/135030/images/Square/1562259292_d4acb9dada0a701cb46a931ae50e9a52.135030.jpeg',
+      fotos: ["", ""],
+      ciudad: {
+            nombre: "Medellín",
+            id: "1"
+      },
+      descripcion: "Color negro",
+      precio: 2500000,
+      seller: {
+            id: 0,
+            nombre: "zoco de oro"
+      },
+      rating: 4.5
+}];</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
@@ -117,14 +117,14 @@ export default Product;</pre></td></tr></table></pre>
                 at Mon Feb 01 2021 22:28:29 GMT-0500 (Colombia Standard Time)
             </div>
         </div>
-        <script src="../../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     

@@ -47,7 +47,5 @@ export async function getProductListService(param) {
       }
     });
   }
-  console.log('Longitud de los productos', products.length)
-  console.log('Productos: ', products)
   return products;
 }

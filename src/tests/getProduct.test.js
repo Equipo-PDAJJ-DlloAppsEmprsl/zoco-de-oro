@@ -1,10 +1,19 @@
 import {getProductListService} from '../services/getProductList.service';
 import {getProductDetailService} from '../services/getProductDetail.service';
-import {getProductDetail} from '../handlers/getProductDetail';
+import {handler} from '../handlers/getProductDetail';
 
 //Unitarias
-
 describe("Get product detail",() => {
+
+      const eventmock={
+            pathParameters:{
+                  ID:1
+            }
+      }
+      const context={
+            callbackWaitsForEmptyEventLoop:false
+      }
+
       const expected = [{
             id: 1,
             nombre: 'Televisor 60 pulgadas',
@@ -34,19 +43,26 @@ describe("Get product detail",() => {
             expect(response).toMatchObject(expected);
       });
 
+      it('Get product detail response 200', async function() {
+            const response = await handler(eventmock,context);
+            expect(response.statusCode).toBe(200);
+      });
+
+      it.only('Get product detail body not null', async function() {
+            const response = await handler(eventmock,context);
+            expect(response.body).not.toBeNull();
+      });
+      
+
+      // it.only('Get product detail application/json content-type', async function() {
+      //       const response = await handler(eventmock,context);
+      //       expect(response.type).toBe("application/json");
+      // });
 })
 
 
 
 describe('Get product list', () => {
-
-
-
-
-
-
-
-
 
 //       const expected = {
          
@@ -80,12 +96,12 @@ describe('Get product list', () => {
 //       ]
 //       };
 
-      test("get product list by number or brand", async function() {
+      it("get product list by number or brand", async function() {
             const response = await getProductListService('LG');
             expect(response.length).toBeGreaterThan(0);
       });
    
-      test("Get product list contain all fields", async function() {
+      it("Get product list contain all fields", async function() {
             const expected = [{
                   id: 2,
                   nombre: 'Celular Motorola G6',
@@ -117,7 +133,7 @@ describe('Get product list', () => {
                         nombre: "zoco de oro"
                   },
                   rating:4.5
-            },
+            }
       
       ];
             const response = await getProductListService('celular');
